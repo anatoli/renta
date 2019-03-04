@@ -1,0 +1,30 @@
+h1 {
+  font-size: 18px;
+}
+li {
+  display: inherit;
+  list-style: inherit;
+}
+ol{
+  counter-reset: item;
+}
+
+ol li:before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  font-weight: bold;
+}
+
+.articles {
+  font-size: 14px;
+  color: #787a7d;
+  font-family: Arial Rounded MT,Arial,sans-serif;
+}
+
+.column {
+  column-count: 2;
+  column-gap: 20px;
+  column-width: 50px;
+  column-rule: 1px solid #ccc;
+
+}

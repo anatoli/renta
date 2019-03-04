@@ -1,0 +1,42 @@
+@import "../../assets/css/mix.scss";
+.tabs-content{
+   height: auto;
+ }
+.tab-content{
+  display: block;
+}
+
+.Modal {
+  position: absolute;
+  top: calc(40% - 250px);
+  left: calc(50% - 585px);
+  width: 1170px;
+  height: auto;
+
+}
+
+#CrossClose {
+  fill: #fff
+}
+#CrossClose:hover {
+  fill: $brand_color_lg_10;
+}
+
+.Overlay button {
+  float: right;
+  background: transparent;
+}
+#CrossClose {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+}

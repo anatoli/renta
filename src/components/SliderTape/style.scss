@@ -1,0 +1,15 @@
+.tabs-content{
+  height: auto;
+}
+.tab-content{
+  display: block;
+}
+
+
+.tab-content.visible {
+  display: block;
+}
+
+.tab-content.invisible {
+  display: none;
+}
