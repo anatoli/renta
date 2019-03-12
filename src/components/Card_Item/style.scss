@@ -1,0 +1,63 @@
+@import "../../assets/css/mix";
+
+.product-outer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  align-items: stretch;
+  margin: 0;
+  .product-inner {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+    padding: 20px;
+    text-align: center;
+    h2 {
+      font-size: 20px;
+    }
+
+    .button {
+      font: 900 20px/30px Akrobat;
+      color: #353741;
+      padding: 10px 50px;
+      margin: 10px 0;
+    }
+
+    .add-to-cart-wrap {
+      a {
+        width: 90%;
+      }
+    }
+    &:hover {
+      position: relative;
+      box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.8);
+      z-index: 2;
+    }
+  }
+  .separator {
+    vertical-align: top;
+  }
+  .count {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: $brand_color;
+    text-shadow: 1px 0px 4px #000000;
+    &-literal, .day{
+      font-size: 1rem;
+      vertical-align: top;
+      color: #343f49;
+      text-shadow: none;
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .product-outer {
+    .product-inner {
+      flex: 0 0 90.3333333333%;
+      max-width: 90.3333333333%;
+      padding: 20px;
+      text-align: center;
+    }
+  }
+}

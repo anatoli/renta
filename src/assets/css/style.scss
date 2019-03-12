@@ -1,4 +1,5 @@
 @import "./mix.scss";
+@import "./media.scss";
 @font-face {
     font-family: 'Akrobat';
     src: url('../../assets/fonts/Akrobat.woff2') format('woff2'),
@@ -454,6 +455,7 @@ html {
 body {
     -webkit-text-size-adjust: 100%;
     overflow: hidden;
+    min-width: 420px;
 }
 
 #global-wrapper {
@@ -546,7 +548,7 @@ a:active {
     position: relative;
     display: inline-block;
     font: 900 20px/30px Akrobat;
-    color: #fff;
+    color: $color_text_def;
     letter-spacing: 1px;
     padding: 23px 50px;
     background: $brand_color_lg_10;
@@ -572,6 +574,7 @@ a:active {
     padding-left: 70px;
     padding-right: 70px;
     letter-spacing: 2px;
+    color: #353741;
 }
 
 .button.block {
@@ -640,6 +643,7 @@ a:active {
 
 #top {
     position: fixed;
+    min-width: 420px;
     top: 0;
     left: 0;
     width: 100%;
@@ -660,6 +664,7 @@ a:active {
 
 #top.fixed .centered {
     padding: 15px 0;
+
 }
 
 .logo {
@@ -803,7 +808,7 @@ header .centered {
 .header-content {
     position: relative;
     z-index: 3;
-    padding: 200px 0;
+    padding: 80px 0;
 }
 
 .header-button-wrapper {
@@ -813,8 +818,8 @@ header .centered {
 
 .header-image {
     position: absolute;
-    left: 35%;
-    top: 10%;
+    left: 44%;
+    top: 42%;
 }
 
 #usp {

@@ -16,9 +16,9 @@ class Footer extends Component {
 
                     <div className="si-phone">
 
-                        <a href="tel:+375291852795" className="phone-link">+375 (29) 879-16-71</a>
+                        <a href="tel:+375293608311" className="phone-link">+375 (29) 360-83-11</a>
 
-                        <a href="tel:+375292614583" className="phone-link">+375 (29) 879-16-71</a>
+                        <a href="tel:+375296871647" className="phone-link">+375 (29) 687-16-47</a>
 
                         <a href="#" className="open-phone-modal modal-link buzz-inside" data-extra="1">
                             <span className="phone-icon-wrapper">

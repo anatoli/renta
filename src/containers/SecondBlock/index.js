@@ -8,18 +8,66 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import '../../assets/css/style.scss';
 import './style.scss';
 import Zoom from '../../assets/icon/Zoom';
+import CardItem from '../../components/Card_Item'
+import Modal from "react-modal";
+import CrossClose from "../../assets/icon/CrossClose";
+import SliderTape from "../../components/SliderTape";
+import SliderAndDescription from "../../components/SliderAndDescription";
 
 
 class SecondBlock extends Component {
 
+    constructor(props)
+    {
+        super();
+        this.tabsDefault=[
+            {id:'1', name:'Строительство под ключ', active: true},
+            {id:'2', name:'Внутренние работы', active: false},
+            {id:'3', name:'Бетонные работы', active: false},
+            {id:'4', name:'Строительство заборов', active: false},
+            {id:'5', name:'Благоустройство территории', active: false}
+        ]
+        this.state = {
+            currentIndex: 0,
+            items: [1, 2, 3, 4, 5],
+            tabs: this.tabsDefault,
+            workInPlaceIndex: 1,
+            concreteOfWork: 1,
+            modalIsOpen: false
+        }
+    }
+    openModal = () => {
+        this.setState({modalIsOpen: true});
+        return false;
+    };
+
+    afterOpenModal = () => {
+        // references are now sync'd and can be accessed.
+    };
+
+    closeModal = () => {
+        this.setState({modalIsOpen: false});
+    };
+
     render() {
         return (
             <section id="projects">
+                <Modal
+                    isOpen={this.state.modalIsOpen}
+                    onAfterOpen={this.afterOpenModal}
+                    onRequestClose={this.closeModal}
+                    contentLabel="Example Modal"
+                    className="Modal"
+                    overlayClassName="Overlay"
+                >
+                    <button className='closeBtn' onClick={this.closeModal}><CrossClose width='50' height='50'/></button>
+                    <CardItem />
+                </Modal>
                 <div className="centered">
 
                     <h2 className="text-align-center">
 
-                        ОТ ПРОЕКТА ДО ГОТОВОГО РЕМОНТА
+                        НАШ КАТАЛОГ
 
                     </h2>
 
@@ -28,182 +76,13 @@ class SecondBlock extends Component {
                         Ваш ремонт будет один в один, как в дизайн-проекте. Сравните сами. Слева проект, справа готовый ремонт
 
                     </div>
-
-                    <div className="single-slider-wrapper">
-                        <div className="single-slider reviews-slider on-dark-bg owl-carousel owl-loaded owl-drag">
-
-                            <div className="owl-stage-outer">
-                                <div className="owl-stage">
-                                    <div className="owl-item cloned">
-                                        <div className="single-slider-project si-justify">
-
-                                            <a href="http://am24.by/wp-content/uploads/2019/01/11.jpg"
-                                               className="single-slider-project-media show-zoom" data-fancybox="projects-1">
-
-                                                <img
-                                                    src="http://am24.by/wp-content/themes/remont/timthumb.php?src=http://am24.by/wp-content/uploads/2019/01/11.jpg&amp;w=470&amp;h=315"
-                                                    alt="" className="single-slider-media-item-image" />
-
-                                                    <span className="photo-overlay"></span>
-                                                    <span className="photo-border"></span>
-
-                                                    <Zoom />
-
-                                            </a>
-
-                                            <a href="http://am24.by/wp-content/uploads/2019/01/12-2.jpg"
-                                               className="single-slider-project-media show-zoom" data-fancybox="projects-1">
-
-                                                <img
-                                                    src="http://am24.by/wp-content/themes/remont/timthumb.php?src=http://am24.by/wp-content/uploads/2019/01/12-2.jpg&amp;w=470&amp;h=315"
-                                                    alt="" className="single-slider-media-item-image" />
-
-                                                    <span className="photo-overlay"></span>
-                                                    <span className="photo-border"></span>
-
-                                                    <Zoom />
-
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                    <div className="owl-item cloned" >
-                                        <div className="single-slider-project si-justify">
-
-                                            <a href="http://am24.by/wp-content/uploads/2019/01/11.jpg"
-                                               className="single-slider-project-media show-zoom" data-fancybox="projects-1">
-
-                                                <img
-                                                    src="http://am24.by/wp-content/themes/remont/timthumb.php?src=http://am24.by/wp-content/uploads/2019/01/11.jpg&amp;w=470&amp;h=315"
-                                                    alt="" className="single-slider-media-item-image" />
-
-                                                    <span className="photo-overlay"></span>
-                                                    <span className="photo-border"></span>
-
-                                                    <Zoom />
-
-                                            </a>
-
-                                            <a href="http://am24.by/wp-content/uploads/2019/01/12-2.jpg"
-                                               className="single-slider-project-media show-zoom" data-fancybox="projects-1">
-                                                <img
-                                                    src="http://am24.by/wp-content/themes/remont/timthumb.php?src=http://am24.by/wp-content/uploads/2019/01/12-2.jpg&amp;w=470&amp;h=315"
-                                                    alt="" className="single-slider-media-item-image" />
-                                                    <span className="photo-overlay"></span>
-                                                    <span className="photo-border"></span>
-                                                    <Zoom />
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                    <div className="owl-item active">
-                                        <div className="single-slider-project si-justify">
-
-                                            <a href="http://am24.by/wp-content/uploads/2019/01/11.jpg"
-                                               className="single-slider-project-media show-zoom" data-fancybox="projects-1">
-
-                                                <img
-                                                    src="http://am24.by/wp-content/themes/remont/timthumb.php?src=http://am24.by/wp-content/uploads/2019/01/11.jpg&amp;w=470&amp;h=315"
-                                                    alt="" className="single-slider-media-item-image" />
-
-                                                    <span className="photo-overlay"></span>
-                                                    <span className="photo-border"></span>
-
-                                                    <Zoom />
-
-                                            </a>
-
-                                            <a href="http://am24.by/wp-content/uploads/2019/01/12-2.jpg"
-                                               className="single-slider-project-media show-zoom" data-fancybox="projects-1">
-
-                                                <img
-                                                    src="http://am24.by/wp-content/themes/remont/timthumb.php?src=http://am24.by/wp-content/uploads/2019/01/12-2.jpg&amp;w=470&amp;h=315"
-                                                    alt="" className="single-slider-media-item-image" />
-
-                                                    <span className="photo-overlay"></span>
-                                                    <span className="photo-border"></span>
-
-                                                    <Zoom />
-
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                    <div className="owl-item cloned" >
-                                        <div className="single-slider-project si-justify">
-
-                                            <a href="http://am24.by/wp-content/uploads/2019/01/11.jpg"
-                                               className="single-slider-project-media show-zoom" data-fancybox="projects-1">
-
-                                                <img
-                                                    src="http://am24.by/wp-content/themes/remont/timthumb.php?src=http://am24.by/wp-content/uploads/2019/01/11.jpg&amp;w=470&amp;h=315"
-                                                    alt="" className="single-slider-media-item-image" />
-
-                                                    <span className="photo-overlay"></span>
-                                                    <span className="photo-border"></span>
-
-                                                    <Zoom />
-
-                                            </a>
-
-                                            <a href="http://am24.by/wp-content/uploads/2019/01/12-2.jpg"
-                                               className="single-slider-project-media show-zoom" data-fancybox="projects-1">
-
-                                                <img
-                                                    src="http://am24.by/wp-content/themes/remont/timthumb.php?src=http://am24.by/wp-content/uploads/2019/01/12-2.jpg&amp;w=470&amp;h=315"
-                                                    alt="" className="single-slider-media-item-image" />
-
-                                                    <span className="photo-overlay"></span>
-                                                    <span className="photo-border"></span>
-
-                                                    <Zoom />
-
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                    <div className="owl-item cloned">
-                                        <div className="single-slider-project si-justify">
-
-                                            <a href="http://am24.by/wp-content/uploads/2019/01/11.jpg"
-                                               className="single-slider-project-media show-zoom" data-fancybox="projects-1">
-
-                                                <img
-                                                    src="http://am24.by/wp-content/themes/remont/timthumb.php?src=http://am24.by/wp-content/uploads/2019/01/11.jpg&amp;w=470&amp;h=315"
-                                                    alt="" className="single-slider-media-item-image" />
-
-                                                    <span className="photo-overlay"></span>
-                                                    <span className="photo-border"></span>
-
-                                                    <Zoom />
-
-                                            </a>
-
-                                            <a href="http://am24.by/wp-content/uploads/2019/01/12-2.jpg"
-                                               className="single-slider-project-media show-zoom" data-fancybox="projects-1">
-
-                                                <img
-                                                    src="http://am24.by/wp-content/themes/remont/timthumb.php?src=http://am24.by/wp-content/uploads/2019/01/12-2.jpg&amp;w=470&amp;h=315"
-                                                    alt="" className="single-slider-media-item-image" />
-
-                                                    <span className="photo-overlay"></span>
-                                                    <span className="photo-border"></span>
-
-                                                    <Zoom />
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="owl-nav disabled">
-                                <button type="button" role="presentation" className="owl-prev"><span aria-label="Previous">‹</span>
-                                </button>
-                                <button type="button" role="presentation" className="owl-next"><span aria-label="Next">›</span>
-                                </button>
-                            </div>
-                            <div className="owl-dots disabled"></div>
-                        </div>
+                    <div className='product-outer'>
+                        <CardItem onClick={this.openModal} />
+                        <CardItem onClick={this.openModal} />
+                        <CardItem onClick={this.openModal} />
+                        <CardItem onClick={this.openModal} />
+                        <CardItem onClick={this.openModal} />
+                        <CardItem onClick={this.openModal} />
                     </div>
 
 
