@@ -34,7 +34,14 @@ class SecondBlock extends Component {
             workInPlaceIndex: 1,
             concreteOfWork: 1,
             modalIsOpen: false
-        }
+        };
+
+        let json = require('../../assets/config_catalog.json');
+
+          console.log(json);
+          this.catalog = JSON.parse(json);
+          console.log(this.catalog);
+
     }
     openModal = () => {
         this.setState({modalIsOpen: true});
