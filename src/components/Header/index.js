@@ -33,15 +33,15 @@ class Header extends Component {
             <section id="top" className={this.state.headerPosition}>
                 <div className="centered si-justify">
                     <a href="/" className="logo">
-                        <strong>ПРОКАТ ИНСТРУМЕНТА</strong>
+                        <strong>СТРОЙКА ПОД КЛЮЧ</strong>
                         В МИНСКЕ
                     </a>
 
                     <div className="si-phone">
 
-                        <a href="tel:+375293608311" className="phone-link">+375 (29) 360-83-11</a>
+                        <a href='tel:+375259480702' className="phone-link">+375 (25) 948-07-02</a>
 
-                        <a href="tel:+375296871647" className="phone-link">+375 (29) 687-16-47</a>
+                        <a href="tel:+375298791671" className="phone-link">+375 (29) 879-16-71</a>
 
                         <a href="#" className="open-phone-modal modal-link buzz-inside" data-extra="1">
                             <span className="phone-icon-wrapper">

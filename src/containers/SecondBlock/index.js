@@ -36,11 +36,13 @@ class SecondBlock extends Component {
             modalIsOpen: false
         };
 
-        let json = require('../../assets/config_catalog.json');
+        fetch('./assets/config_catalog.json').then((response)=>{
+            console.log(response);
+            debugger
+            this.catalog = response;
+        });
 
-          console.log(json);
-          this.catalog = JSON.parse(json);
-          console.log(this.catalog);
+
 
     }
     openModal = () => {
