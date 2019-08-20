@@ -15,8 +15,8 @@ class SearchInput extends Component {
       <div className="App">
         <Header />
         <FirstBlock />
-        {/*<WorkTypes />*/}
-        <SecondBlock />
+        <WorkTypes />
+        {/*<SecondBlock />*/}
         {/*<ExamplesList />*/}
         {/*<div className='wrapper'>*/}
           {/*<input placeholder='Почему' />*/}

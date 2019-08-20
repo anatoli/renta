@@ -574,7 +574,7 @@ a:active {
     padding-left: 70px;
     padding-right: 70px;
     letter-spacing: 2px;
-    color: #353741;
+    color: #ffffff;
 }
 
 .button.block {
@@ -600,8 +600,8 @@ a:active {
 }
 
 .button.border:active {
-    background: #e4b600;
-    border-color: #e4b600;
+    background: $brand-color;
+    border-color: $brand-color;
 }
 
 .clear {
@@ -677,7 +677,7 @@ a:active {
 }
 
 .logo:active {
-    color: #dcb313;
+    color: $brand-color;
 }
 
 .logo strong {
@@ -817,9 +817,9 @@ header .centered {
 }
 
 .header-image {
-    position: absolute;
-    left: 44%;
-    top: 42%;
+  position: absolute;
+  left: 35%;
+  top: 10%;
 }
 
 #usp {
@@ -2522,7 +2522,7 @@ a:active .big-modal-button-arrow.next {
 .si-page-message {
     display: none;
     flex: 1;
-    background: #f5ce2f;
+    background: $brand-color;
     color: #000;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     text-align: center;
@@ -2603,7 +2603,7 @@ a:active .big-modal-button-arrow.next {
 
 .cssload-box-loading:after {
     height: 49px;
-    background: #f5ce2f;
+    background: $brand-color;
     top: 0;
     border-radius: 3px;
     animation: cssload-animate .58s linear infinite;
@@ -2657,7 +2657,7 @@ a:active .big-modal-button-arrow.next {
 }
 
 #nprogress .bar {
-    background: #f5ce2f;
+    background: $brand-color;
     position: absolute;
     top: 0;
     left: 0;
@@ -2673,7 +2673,7 @@ a:active .big-modal-button-arrow.next {
     right: 0px;
     width: 100px;
     height: 100%;
-    box-shadow: 0 0 10px #f5ce2f, 0 0 5px #f5ce2f;
+    box-shadow: 0 0 10px $brand-color, 0 0 5px $brand-color;
     opacity: 1;
     transform: rotate(3deg) translate(0px, -4px);
 }
@@ -2693,8 +2693,8 @@ a:active .big-modal-button-arrow.next {
     height: 18px;
     box-sizing: border-box;
     border: 2px solid transparent;
-    border-top-color: #f5ce2f;
-    border-left-color: #f5ce2f;
+    border-top-color: $brand-color;
+    border-left-color: $brand-color;
     border-radius: 50%;
     animation: nprogress-spinner 400ms linear infinite;
 }

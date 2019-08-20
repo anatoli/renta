@@ -1,3 +1,4 @@
+@import "../../assets/css/mix";
 @font-face {
     font-family: 'Akrobat';
     src: url('../../assets/fonts/Akrobat.woff2') format('woff2'),
@@ -83,7 +84,7 @@
 /* Button shadow */
 @keyframes si-button-pulse {
     from {
-        box-shadow: 0 0 8px 6px #f8c700, 0 0 12px 14px #f8c700;
+        box-shadow: 0 0 8px 6px $brand-color, 0 0 12px 14px $brand-color;
     }
     to {
         box-shadow: 0 0 18px 6px rgba(248, 199, 0, 0), 0 0 40px 40px rgba(248, 199, 0, 0);
@@ -247,7 +248,7 @@ sub {
     left: 40%;
     width: 20%;
     height: 20%;
-    fill: #ffcc00;
+    fill: $brand-color;
     opacity: 0;
     transform: scale(5);
     transition: all 0.3s ease-out 0s;
@@ -263,7 +264,7 @@ sub {
     top: 42%;
     left: 42%;
     width: 16%;
-    background: #ffcc00;
+    background: $brand-color;
     border-radius: 50%;
     transition: all 0.3s ease-out 0s;
 }
@@ -290,7 +291,7 @@ sub {
     left: -10px;
     bottom: -10px;
     right: -10px;
-    border: 10px solid #ffcc00;
+    border: 10px solid $brand-color;
     border-radius: 50%;
     opacity: .5;
     transition: all 0.3s ease-out 0s;
@@ -545,9 +546,9 @@ a:active {
     color: #272727;
     letter-spacing: 1px;
     padding: 23px 50px;
-    background: #f8c700;
+    background: $brand-color;
     border-radius: 100px;
-    box-shadow: inset 0 50px 60px #ffcc00, 0 5px 0 #e1b815;
+    box-shadow: inset 0 50px 60px $brand-color, 0 5px 0 #e1b815;
     transform: translateZ(0)
 }
 
@@ -567,12 +568,6 @@ a:active {
     padding: 10px 0;
 }
 
-.button.wide {
-    padding-left: 70px;
-    padding-right: 70px;
-    letter-spacing: 2px;
-}
-
 .button.block {
     display: block;
     width: 100%;
@@ -586,18 +581,18 @@ a:active {
 }
 
 .button.border {
-    border: 2px solid #ffcc00;
+    border: 2px solid $brand-color;
     background: transparent;
     box-shadow: none;
 }
 
 .button.border:hover {
-    background: #ffcc00
+    background: $brand-color
 }
 
 .button.border:active {
-    background: #e4b600;
-    border-color: #e4b600;
+    background: $brand-color;
+    border-color: $brand-color;
 }
 
 .clear {
@@ -667,11 +662,11 @@ a:active {
 }
 
 .logo:hover {
-    color: #f5ce34;
+    color: $brand-color;
 }
 
 .logo:active {
-    color: #dcb313;
+    color: $brand-color;
 }
 
 .logo strong {
@@ -690,11 +685,11 @@ a:active {
 }
 
 .si-phone .phone-link:hover {
-    color: #f5ce34;
+    color: $brand-color;
 }
 
 .si-phone .phone-link:active {
-    color: #dcb313;
+    color: $brand-color;
 }
 
 .si-phone .phone-link:after {
@@ -719,11 +714,11 @@ a:active {
 }
 
 .si-phone .modal-link:hover {
-    color: #f5ce34;
+    color: $brand-color;
 }
 
 .si-phone .modal-link:active {
-    color: #dcb313;
+    color: $brand-color;
 }
 
 .si-phone .modal-link span.text {
@@ -742,7 +737,7 @@ a:active {
     width: 27px;
     height: 27px;
     border-radius: 50%;
-    background: #f5ce2f;
+    background: $brand-color;
     margin: -1px 10px 0 0;
     transition: all 0.2s ease-out 0s;
 }
@@ -752,7 +747,7 @@ a:hover .phone-icon-wrapper {
 }
 
 a:active .phone-icon-wrapper {
-    background: #dcb313;
+    background: $brand-color;
 }
 
 .phone-icon-wrapper:before, .phone-icon-wrapper:after {
@@ -763,7 +758,7 @@ a:active .phone-icon-wrapper {
     left: 0;
     right: 0;
     bottom: 0;
-    border: 1px solid #f5cd2d;
+    border: 1px solid $brand-color;
     border-radius: 50%;
 }
 
@@ -789,7 +784,10 @@ a:hover .phone-icon-wrapper:before, a:hover .phone-icon-wrapper:after, #top.fixe
 }
 
 header {
-    background: #f7f7f7 url(../../assets/img/header-bg.jpg) center top no-repeat;
+    /*background: #f7f7f7 url(../../assets/img/header-bg.jpg) center top no-repeat;*/
+    background: RGBA(247, 247, 247, 0.88) url(../../assets/img/bg-1-gazon.jpg) center top no-repeat fixed;
+    background-size: cover;
+    background-blend-mode: color-dodge;
 }
 
 header .centered {
@@ -809,8 +807,8 @@ header .centered {
 
 .header-image {
     position: absolute;
-    left: 24%;
-    top: 0;
+    left: 35%;
+    top: 10%;
 }
 
 #usp {
@@ -862,7 +860,7 @@ header .centered {
 .check-wrapper {
     width: 27px;
     height: 27px;
-    background: #ffcc00;
+    background: $brand-color;
     border-radius: 50%;
     position: absolute;
 }
@@ -921,7 +919,7 @@ header .centered {
     right: 0;
     width: 0;
     height: 2px;
-    background: #ffcc00;
+    background: $brand-color;
     transition: all 0.3s ease-out 0s;
     pointer-events: none;
 }
@@ -1064,7 +1062,7 @@ header .centered {
 .single-slider-content-stat {
     flex: 0 0 48%;
     margin: 0 0 20px;
-    color: #ffcc00;
+    color: $brand-color;
     font: 900 30px/36px Akrobat;
 }
 
@@ -1117,7 +1115,7 @@ header .centered {
     content: '';
     width: 25%;
     height: 5px;
-    background: #ffcc00;
+    background: $brand-color;
     position: absolute;
     top: 52%;
     margin-top: -3px;
@@ -1126,7 +1124,7 @@ header .centered {
 }
 
 .owl-prev:hover:before, .owl-prev:hover:after, .owl-next:hover:before, .owl-next:hover:after {
-    background: #ffcc00
+    background: $brand-color
 }
 
 .owl-prev:before, .owl-prev:after {
@@ -1217,7 +1215,7 @@ header .centered {
     height: 18px;
     padding: 4px;
     background: transparent;
-    border: 2px solid #ffcc00;
+    border: 2px solid $brand-color;
     border-radius: 50%;
     transition: all 0.2s ease-out 0s;
 }
@@ -1235,15 +1233,15 @@ header .centered {
 }
 
 .owl-dot:hover span {
-    background: #ffcc00;
+    background: $brand-color;
 }
 
 .owl-dot.active {
-    background: #ffcc00
+    background: $brand-color
 }
 
 .owl-dot.active span {
-    background: #ffcc00
+    background: $brand-color
 }
 
 .on-dark-bg .owl-prev, .on-dark-bg .owl-next {
@@ -1724,7 +1722,7 @@ header .centered {
 .fear-cross-icon {
     width: 40px;
     height: 40px;
-    border: 2px solid #ffcc00;
+    border: 2px solid $brand-color;
     border-radius: 50%;
     position: absolute;
     left: 0;
@@ -1798,7 +1796,7 @@ header .centered {
     right: 0;
     width: 0;
     height: 1px;
-    background: #ffcc00;
+    background: $brand-color;
     transition: all 0.3s ease-out 0s;
     pointer-events: none;
 }
@@ -1825,7 +1823,7 @@ header .centered {
 }
 
 .faq-title:hover {
-    color: #ffcc00;
+    color: $brand-color;
 }
 
 .faq-title:active {
@@ -2073,7 +2071,7 @@ html.si-lock, html.si-lock2 {
 }
 
 .si-close:hover:before, .si-close:hover:after {
-    background: #ffcc00
+    background: $brand-color
 }
 
 .si-close:active:before, .si-close:active:after {
@@ -2374,7 +2372,7 @@ html.si-lock, html.si-lock2 {
 .big-modal-button.next {
     background: #f6c501;
     color: #272727;
-    box-shadow: inset 0 20px 20px #ffcc00, 0 3px 0 #e1b815;
+    box-shadow: inset 0 20px 20px $brand-color, 0 3px 0 #e1b815;
     padding-right: 35px;
 }
 
@@ -2513,7 +2511,7 @@ a:active .big-modal-button-arrow.next {
 .si-page-message {
     display: none;
     flex: 1;
-    background: #f5ce2f;
+    background: $brand-color;
     color: #000;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     text-align: center;
@@ -2594,7 +2592,7 @@ a:active .big-modal-button-arrow.next {
 
 .cssload-box-loading:after {
     height: 49px;
-    background: #f5ce2f;
+    background: $brand-color;
     top: 0;
     border-radius: 3px;
     animation: cssload-animate .58s linear infinite;
@@ -2648,7 +2646,7 @@ a:active .big-modal-button-arrow.next {
 }
 
 #nprogress .bar {
-    background: #f5ce2f;
+    background: $brand-color;
     position: absolute;
     top: 0;
     left: 0;
@@ -2664,7 +2662,7 @@ a:active .big-modal-button-arrow.next {
     right: 0px;
     width: 100px;
     height: 100%;
-    box-shadow: 0 0 10px #f5ce2f, 0 0 5px #f5ce2f;
+    box-shadow: 0 0 10px $brand-color, 0 0 5px $brand-color;
     opacity: 1;
     transform: rotate(3deg) translate(0px, -4px);
 }
@@ -2684,8 +2682,8 @@ a:active .big-modal-button-arrow.next {
     height: 18px;
     box-sizing: border-box;
     border: 2px solid transparent;
-    border-top-color: #f5ce2f;
-    border-left-color: #f5ce2f;
+    border-top-color: $brand-color;
+    border-left-color: $brand-color;
     border-radius: 50%;
     animation: nprogress-spinner 400ms linear infinite;
 }

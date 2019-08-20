@@ -11,25 +11,25 @@ class FirstBlock extends Component {
                         <div className="header-content">
                             <h1>
 
-                                ПРОКАТ <br/>
-                                ИНСТРУМЕНТА
+                                СВОЙ ДОМ <br/>
+                                ПОД КЛЮЧ
 
                                 <em>
-                                    строительный интрумент на прокат в минске
+                                    с гарантией сроков и поэтапной оплатой
                                 </em>
                             </h1>
 
                             <div className="header-button-wrapper">
 
-                                Любой инструмент<br/> для самых интересных задач<br/><br/>
+                                Все виды строительных работ<br/> и ландшафтного дизайна<br/><br/>
 
                                 <div className="big-button-wrapper">
 
                                     <div className="button-wrapper pulse-button">
-                                        <a href="#" className="button wide open-calc-modal">ПОСМОТРЕТЬ КАТАЛОГ</a>
+                                        <a href="#" className="button wide open-calc-modal">РАССЧИТАТЬ СТОИМОСТЬ</a>
                                     </div>
 
-                                    <div className="button-description">Закажите звонок для консультации</div>
+                                    <div className="button-description">Получите предварательную смету уже сегодня</div>
                                 </div>
                             </div>
 
