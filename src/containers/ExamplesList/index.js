@@ -11,6 +11,7 @@ import CrossClose from '../../assets/icon/CrossClose';
 import Zoom from '../../assets/icon/Zoom';
 import SliderAndDescription from '../../components/SliderAndDescription'
 import SliderTape from "../../components/SliderTape";
+import Galery from "../../components/Galery";
 
 
 class ExamplesList extends Component {
@@ -169,36 +170,38 @@ class ExamplesList extends Component {
                     </h2>
 
 
-                    <div className="tabs-wrapper works-tabs-wrapper active">
-                        <div className="tabs works-tabs">
-                            {/* Single */}
-                            {
-                                this.state.tabs.map((el, i) =>
-                                    <div className={`tab-item ${el.active ? 'active' : ''}`}
-                                            onClick={() => {this.tabClick(el.id)}}>{el.name}</div>
-                                )
-                            }
-                        </div>
-                    </div>
+                    {/*<div className="tabs-wrapper works-tabs-wrapper active">*/}
+                    {/*    <div className="tabs works-tabs">*/}
+                    {/*        /!* Single *!/*/}
+                    {/*        {*/}
+                    {/*            this.state.tabs.map((el, i) =>*/}
+                    {/*                <div className={`tab-item ${el.active ? 'active' : ''}`}*/}
+                    {/*                        onClick={() => {this.tabClick(el.id)}}>{el.name}</div>*/}
+                    {/*            )*/}
+                    {/*        }*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
 
-                    <div className="tabs-content">
-                        {(() => {
-                            switch (currentIndex) {
-                                case "1":   return <SliderTape>
-                                    <SliderAndDescription imagesList={imagesList5} />
-                                    <SliderAndDescription imagesList={imagesList6} />
-                                </SliderTape>;;
-                                case "2": return <SliderTape imagesList={imagesList2} imageListIndex='2' onClickImage={this.openModal}/>;
-                                case "3": return <SliderTape imagesList={imagesList3} imageListIndex='3' onClickImage={this.openModal}/>;
-                                case "4": return <SliderTape imagesList={imagesList4} imageListIndex='4' onClickImage={this.openModal}/>;
-                                case "5": return <SliderTape imagesList={imagesList5.srcList} imageListIndex='5' onClickImage={this.openModal}/>;
-                                default: return <SliderTape>
-                                    <SliderAndDescription imagesList={imagesList5} />
-                                    <SliderAndDescription imagesList={imagesList6} />
-                                </SliderTape>;;
-                            }}
-                        )()}
-                    </div>
+                    {/*<div className="tabs-content">*/}
+                    {/*    {(() => {*/}
+                    {/*        switch (currentIndex) {*/}
+                    {/*            case "1":   return <SliderTape>*/}
+                    {/*                <SliderAndDescription imagesList={imagesList5} />*/}
+                    {/*                <SliderAndDescription imagesList={imagesList6} />*/}
+                    {/*            </SliderTape>;;*/}
+                    {/*            case "2": return <SliderTape imagesList={imagesList2} imageListIndex='2' onClickImage={this.openModal}/>;*/}
+                    {/*            case "3": return <SliderTape imagesList={imagesList3} imageListIndex='3' onClickImage={this.openModal}/>;*/}
+                    {/*            case "4": return <SliderTape imagesList={imagesList4} imageListIndex='4' onClickImage={this.openModal}/>;*/}
+                    {/*            case "5": return <SliderTape imagesList={imagesList5.srcList} imageListIndex='5' onClickImage={this.openModal}/>;*/}
+                    {/*            default: return <SliderTape>*/}
+                    {/*                <SliderAndDescription imagesList={imagesList5} />*/}
+                    {/*                <SliderAndDescription imagesList={imagesList6} />*/}
+                    {/*            </SliderTape>;*/}
+                    {/*        }}*/}
+                    {/*    )()}*/}
+                    {/*</div>*/}
+
+                    <Galery />
 
 
                 </div>

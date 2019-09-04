@@ -8,7 +8,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import '../../assets/css/style.scss';
 import './style.scss';
 import Zoom from '../../assets/icon/Zoom';
-import CardItem from '../../components/Card_Item'
+import CardItem from '../../components/ContactsForm'
 import Modal from "react-modal";
 import CrossClose from "../../assets/icon/CrossClose";
 import SliderTape from "../../components/SliderTape";

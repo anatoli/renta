@@ -18,6 +18,8 @@ class Footer extends Component {
 
                         <a href='tel:+375259480702' className="phone-link">+375 (25) 948-07-02</a>
 
+                        <a href="tel:+375298791671" className="phone-link">+375 (29) 680-80-38</a>
+
                         <a href="tel:+375298791671" className="phone-link">+375 (29) 879-16-71</a>
 
                         <a href="#" className="open-phone-modal modal-link buzz-inside" data-extra="1">

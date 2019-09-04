@@ -1,0 +1,29 @@
+.wrapperGallery{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+
+}
+.images {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.photo-overlay {
+  &--galery {
+    height: 150px;
+    margin-top: 10px;
+  }
+}
+
+.owl-stage-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 50vw;
+  object-fit: contain;
+}

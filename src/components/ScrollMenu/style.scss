@@ -1,0 +1,24 @@
+@import "../../assets/css/mix";
+.menu-item--custom {
+  .container-image {
+    width: 50vw;
+    height: 50vh;
+    display: -ms-flexbox;
+    display: flex;
+    -o-object-fit: contain;
+    object-fit: cover;
+    -ms-flex-pack: center;
+    justify-content: center;
+    align-items: center;
+  }
+  &-wrapper{
+    margin: 0 10px;
+  }
+}
+
+.scroll-menu-arrow {
+  padding: 20px;
+  cursor: pointer;
+  font-size: 50px;
+  color: $brand-color
+}

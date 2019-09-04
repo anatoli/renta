@@ -32,7 +32,7 @@ class SliderTape extends Component {
         };
         this.setState({translateIndex: index})
     };
-    
+
     render() {
         const { currentIndex, translateIndex} = this.state;
         const { imagesList, imageListIndex, onClickImage, zoomDisabled} = this.props;
@@ -66,12 +66,12 @@ class SliderTape extends Component {
                                                     <img
                                                         src={el}
                                                         alt="" className="single-slider-media -item-image"/>
-                                                    {!zoomDisabled &&
+                                                    {!!zoomDisabled &&
                                                     <span className="photo-overlay"></span>
                                                     }
                                                     <span className="photo-border"></span>
-                                                    {!zoomDisabled &&
-                                                    <Zoom/>
+                                                    {!!zoomDisabled &&
+                                                        <Zoom/>
                                                     }
 
                                                 </a>
