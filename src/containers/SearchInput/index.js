@@ -7,6 +7,7 @@ import SecondBlock from "../SecondBlock";
 import Footer from "../Footer";
 import WorkTypes from "../WorkTypes";
 import ExamplesList from "../ExamplesList";
+import Price from "../Price";
 
 class SearchInput extends Component {
 
@@ -16,6 +17,7 @@ class SearchInput extends Component {
                 <Header />
                 <FirstBlock />
                 <WorkTypes />
+                <Price />
                 {/*<SecondBlock />*/}
                 <ExamplesList />
                 {/*<div className='wrapper'>*/}
